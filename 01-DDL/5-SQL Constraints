@@ -1,0 +1,91 @@
+SQL CONSTRAINTS
+
+Constraints are rules applied to table columns to control what data can be stored.
+They help maintain data accuracy, consistency, and integrity.
+
+🔒 SQL CONSTRAINTS
+
+🔒 CONSTRAINT      🎯 PURPOSE
+
+PRIMARY KEY        → Uniquely identifies each row
+FOREIGN KEY        → Connects two tables
+UNIQUE             → Prevents duplicate values
+NOT NULL           → Prevents NULL values
+CHECK              → Validates a condition
+DEFAULT            → Automatically provides a value
+
+Details 
+
+🔑 PRIMARY KEY
+→ Uniquely identifies each row in a table.
+→ Must be unique and cannot contain NULL values.
+
+🔗 FOREIGN KEY
+→ Connects one table to another.
+→ References a key, usually the PRIMARY KEY, in another table.
+
+💎 UNIQUE
+→ Prevents duplicate values in a column or combination of columns.
+→ Used when each value must be different.
+
+🚫 NOT NULL
+→ Prevents NULL values from being stored in a column.
+→ Used when a value is required.
+
+✅ CHECK
+→ Ensures that inserted or updated values satisfy a specified condition.
+→ Example: CHECK (Salary > 0).
+
+⚙️ DEFAULT
+→ Automatically provides a predefined value when no value is supplied.
+→ Example: Country DEFAULT 'India'.
+
+🏗️ COLUMN-LEVEL
+→ A constraint defined directly with a column.
+→ Usually applies to that specific column.
+
+🏗️ TABLE-LEVEL
+→ A constraint defined separately from the column definitions.
+→ Useful for constraints involving multiple columns.
+
+🔢 COMPOSITE PRIMARY KEY
+→ A PRIMARY KEY made up of two or more columns.
+→ The combination of those columns must uniquely identify each row.
+
+🛡️ REFERENTIAL INTEGRITY
+→ Ensures that relationships between related tables remain valid.
+→ Prevents invalid FOREIGN KEY references.
+
+🏠 PARENT TABLE
+→ The table containing the referenced key.
+→ Usually contains the PRIMARY KEY referenced by another table.
+
+👶 CHILD TABLE
+→ The table containing the FOREIGN KEY.
+→ It references a key in the parent table.
+
+🔄 ON UPDATE
+→ Defines what happens to related child records when a referenced
+  value in the parent table is updated.
+
+🗑️ ON DELETE
+→ Defines what happens to related child records when a referenced
+  record in the parent table is deleted.
+
+💥 CASCADE
+→ Automatically applies the parent table's change to related
+  child records.
+→ Can be used with ON DELETE or ON UPDATE.
+
+🚫 RESTRICT
+→ Prevents a parent record from being deleted or updated when
+  doing so would break the FOREIGN KEY relationship.
+
+🔄 SET NULL
+→ Changes the related FOREIGN KEY value in the child table to NULL
+  when the referenced parent record is deleted or updated.
+→ The FOREIGN KEY column must allow NULL.
+
+🏷️ CONSTRAINT NAME
+→ A custom name given to a constraint.
+→ Makes constraints easier to identify, modify, and remove later.
