@@ -1,1 +1,58 @@
 
+DDL — Data Definition Language
+
+DDL (Data Definition Language) is used to define, create, modify, and remove the structure of database objects such as databases, tables, 
+columns, constraints, views, and indexes.
+
+🎯 Main DDL Commands
+
+🧩 Command	 📌 Purpose
+🟢 CREATE:   Creates a new database object
+🟡 ALTER:   	Modifies an existing database object
+🔴 DROP:	    Permanently removes a database object
+🟠 TRUNCATE:	Removes all rows from a table while keeping its structure
+🔵 RENAME:	  Renames an existing database object
+
+📚 DDL Overview
+
+🟢 CREATE
+
+Used to create new database objects such as:
+
+🗄️ Database
+📋 Table
+👁️ View
+🔍 Index
+🗂️ Schema
+
+🟡 ALTER
+
+Used to modify the structure of an existing database object.
+
+Examples:
+
+➕ Add a column
+✏️ Modify a column
+🔄 Rename a column
+➕ Add a constraint
+❌ Drop a column
+
+🔴 DROP
+
+Used to permanently delete a database object.
+
+Examples:
+
+🗑️ Drop database
+🗑️ Drop table
+🗑️ Drop view
+🗑️ Drop index
+
+🟠 TRUNCATE
+
+Used to remove all records from a table while keeping the table structure.
+
+🔵 RENAME
+
+Used to change the name of an existing database object.
+
