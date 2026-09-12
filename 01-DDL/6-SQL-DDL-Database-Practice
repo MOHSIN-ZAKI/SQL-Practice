@@ -1,6 +1,7 @@
 ------------------------------------
 --SQL Practice(DDL Commands)
 ------------------------------------
+
 -- 1. Create a Database name company_db
 
 -- 2. Create Another Database name sales_db
@@ -20,37 +21,104 @@
 -- 9. Write a SQL command to change both the character set and collation of company_db.
 
 -- 10. What SQL command is used to permanently delete a database?
+
 -- 11. Write a SQL command to delete company_db.
+
 -- 12. Write a SQL command to delete company_db only if it exists.
+
 -- 13. What is the difference between CREATE DATABASE and USE?
+
 -- 14. What is the difference between ALTER DATABASE and DROP DATABASE?
+
 -- 15. What happens to the tables and data when a database is dropped?
+
 -- 16. Which command would you use to select an existing database before creating tables?
+
 -- 17. Which command creates a new database?
+
 -- 18. Which command modifies an existing database?
+
 -- 19. Which command permanently removes an existing database?
+
 -- 20. Which command makes a database the current database?
+
 -- 21. Write the correct DDL commands to create, select, alter, and finally drop a database named company_db.
 
---1
+-- 1
 CREATE DATABASE company_db;
---2
+
+-- 2
 CREATE DATABASE sales_db;
---3
+
+-- 3
 CREATE DATABASE IF NOT EXISTS hr_db;
---4
+
+-- 4
 USE company_db;
---5
+
+-- 5
 USE sales_db;
---6
--- ALTER DATABASE command is used modify database-level properties
---7
+
+-- 6
+-- ALTER DATABASE command is used to modify database-level properties.
+
+-- 7
 ALTER DATABASE company_db
 CHARACTER SET utf8mb4;
---8
+
+-- 8
 ALTER DATABASE company_db
 COLLATE utf8mb4_unicode_ci;
---9
 
+-- 9
+ALTER DATABASE company_db
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
 
+-- 10
+-- DROP DATABASE is used to permanently delete a database.
+
+-- 11
+DROP DATABASE company_db;
+
+-- 12
+DROP DATABASE IF EXISTS company_db;
+
+-- 13
+-- CREATE DATABASE creates a new database,
+-- while USE selects an existing database for the current session.
+
+-- 14
+-- ALTER DATABASE modifies database-level properties,
+-- while DROP DATABASE permanently removes the database.
+
+-- 15
+-- The database, its tables, data, and objects inside it
+-- are permanently removed.
+
+-- 16
+USE database_name;
+
+-- 17
+CREATE DATABASE;
+
+-- 18
+ALTER DATABASE;
+
+-- 19
+DROP DATABASE;
+
+-- 20
+USE;
+
+-- 21
+CREATE DATABASE company_db;
+
+USE company_db;
+
+ALTER DATABASE company_db
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+DROP DATABASE company_db;
 
