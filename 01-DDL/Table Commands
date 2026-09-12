@@ -1,0 +1,50 @@
+TABLE COMMANDS
+
+Table commands in SQL are used to create, modify, rename, and remove the structure of tables within a database.
+
+Commands	and What it does
+
+🟢 CREATE TABLE:     Creates a new table and defines its structure
+🟡 ALTER TABLE:   	  Modifies the structure of an existing table
+🔵 RENAME TABLE:     Changes the name of an existing table
+🟠 TRUNCATE TABLE	:   Removes all records while keeping the table structure
+🔴 DROP TABLE:    	  Permanently removes the table and its structure
+
+
+🟢 CREATE TABLE
+
+Used to create a new table by defining its:
+
+Columns
+Data types
+Constraints
+Relationships
+
+🟡 ALTER TABLE
+
+Used to change the structure of an existing table.
+
+It can be used to:
+
+Add columns
+Modify columns
+Rename columns
+Remove columns
+Add constraints
+Remove constraints
+
+🔵 RENAME TABLE
+
+Used to change the name of an existing table without changing its data or overall structure.
+
+🟠 TRUNCATE TABLE
+
+Used to remove all records from a table while keeping the table itself and its structure.
+
+Data is removed → Structure remains.
+
+🔴 DROP TABLE
+
+Used to permanently remove an entire table, including its structure and stored data.
+
+Table + Data + Structure → Removed.
