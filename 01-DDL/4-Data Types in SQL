@@ -1,0 +1,68 @@
+--Data Types in SQL
+
+SQL data types define what kind of data a column can store. Choosing the correct data type helps maintain data accuracy, consistency, and efficient storage.
+
+📚 Main Categories
+Category	                      Used For		                      Examples
+🔢 Numeric		                  Numbers		                        INT, BIGINT, DECIMAL, FLOAT
+🔤 Character/String	            Text		                          CHAR, VARCHAR, TEXT
+📅 Date & Time	                Dates and times		                DATE, TIME, DATETIME, TIMESTAMP
+✅ Boolean	                    True/False values		              BOOLEAN, BIT
+🧮 Binary	Binary                data		                          BINARY, VARBINARY
+📦 Other/Specialized	          Database-specific data	          JSON, XML, UUID
+
+QUICK REFERENCE   
+
+💠 DATATYPE        📦 STORES                    💾 STORAGE       📏 RANGE / LIMIT
+────────────────────────────────────────────────────────────────────────────────
+
+🔢 INT             Whole numbers                4 bytes          -2,147,483,648 to
+                                                                  2,147,483,647
+
+🔢 BIGINT          Large whole numbers          8 bytes          -9,223,372,036,854,775,808
+                                                                  to
+                                                                  9,223,372,036,854,775,807
+
+💰 DECIMAL         Exact decimals               Variable         M ≤ 65, D ≤ 30
+
+📊 FLOAT           Approximate decimals         4 bytes          Approximately
+                                                                  7 decimal digits
+
+🔤 CHAR            Fixed-length text            Fixed            Maximum 255 characters
+
+🔤 VARCHAR         Variable-length text         Variable         Up to 65,535 bytes*
+
+📝 TEXT            Large text                   Variable         Maximum 65,535 bytes
+
+📅 DATE            Date                         3 bytes          1000-01-01
+                                                                  to 9999-12-31
+
+⏰ TIME            Time / time interval         3 bytes          -838:59:59
+                                                                  to 838:59:59
+
+🕐 DATETIME        Date + time                  8 bytes          1000-01-01
+                                                                  to 9999-12-31
+
+🕐 TIMESTAMP       Date + time                  4 bytes          1970-01-01
+                                                                  to 2038-01-19
+
+✅ BOOLEAN         True / False                 1 byte*           0 / 1
+
+📦 VARBINARY       Binary data                  Variable         Up to 65,535 bytes*
+
+
+────────────────────────────────────────────────────────────────────────────────
+⚠️ NOTES
+────────────────────────────────────────────────────────────────────────────────
+
+🔹 VARCHAR(100) → Up to 100 characters, not necessarily 100 bytes.
+
+🔹 DECIMAL(10,2) → 10 total digits, with 2 digits after the decimal.
+
+🔹 CHAR(10) → Fixed-length text.
+
+🔹 VARCHAR(10) → Variable-length text, up to 10 characters.
+
+🔹 BOOLEAN in MySQL → Alias for TINYINT(1).
+
+🔹 *Actual VARCHAR / VARBINARY limits depend on row size and character set.
