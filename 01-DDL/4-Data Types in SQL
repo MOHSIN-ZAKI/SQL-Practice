@@ -3,13 +3,14 @@
 SQL data types define what kind of data a column can store. Choosing the correct data type helps maintain data accuracy, consistency, and efficient storage.
 
 📚 Main Categories
-Category	                      Used For		                      Examples
-🔢 Numeric		                  Numbers		                        INT, BIGINT, DECIMAL, FLOAT
-🔤 Character/String	            Text		                          CHAR, VARCHAR, TEXT
-📅 Date & Time	                Dates and times		                DATE, TIME, DATETIME, TIMESTAMP
-✅ Boolean	                    True/False values		              BOOLEAN, BIT
-🧮 Binary	Binary                data		                          BINARY, VARBINARY
-📦 Other/Specialized	          Database-specific data	          JSON, XML, UUID
+
+Category                  Used For                       Examples
+🔢 Numeric                Numbers                        INT, BIGINT, DECIMAL, FLOAT
+🔤 Character/String       Text                           CHAR, VARCHAR, TEXT
+📅 Date & Time            Dates and times                DATE, TIME, DATETIME, TIMESTAMP
+✅ Boolean                True/False values              BOOLEAN, BIT
+🧮 Binary                 Binary data                    BINARY, VARBINARY
+📦 Other/Specialized      Database-specific data         JSON, XML, UUID
 
 QUICK REFERENCE   
 
