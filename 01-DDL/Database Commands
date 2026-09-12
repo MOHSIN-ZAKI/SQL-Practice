@@ -1,0 +1,59 @@
+Database commands are used to create, select, modify, and remove databases.
+
+🟢 1. CREATE DATABASE
+
+Creates a new database.
+
+CREATE DATABASE company_db;
+Safe version
+CREATE DATABASE IF NOT EXISTS company_db;
+🔵 2. USE DATABASE
+
+Selects a database so that subsequent commands operate within it.
+
+USE company_db;
+
+⚠️ USE is supported by systems such as MySQL and SQL Server, but database selection syntax varies across SQL platforms.
+
+🟡 3. ALTER DATABASE
+
+Modifies database-level properties.
+
+ALTER DATABASE company_db
+MODIFY NAME = company_database;
+
+⚠️ ALTER DATABASE syntax is database-specific. MySQL, SQL Server, PostgreSQL, and Oracle use different approaches for many database-level changes.
+
+🔴 4. DROP DATABASE
+
+Permanently removes a database and its objects.
+
+DROP DATABASE company_db;
+Safe version
+DROP DATABASE IF EXISTS company_db;
+
+🚨 Warning: Dropping a database removes the database structure and the objects/data contained within it.
+
+📋 Database Command Summary
+🧩 Command	📌 Purpose
+🟢 CREATE DATABASE	Creates a new database
+🔵 USE	Selects the database to work with
+🟡 ALTER DATABASE	Modifies database properties
+🔴 DROP DATABASE	Permanently removes a database
+🧠 Basic Database Workflow
+🗄️ DATABASE
+     │
+     ▼
+🟢 CREATE DATABASE
+     │
+     ▼
+🔵 USE DATABASE
+     │
+     ▼
+📋 CREATE TABLES
+     │
+     ▼
+✏️ ALTER / MODIFY
+     │
+     ▼
+🔴 DROP DATABASE
