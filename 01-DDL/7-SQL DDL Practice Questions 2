@@ -26,7 +26,7 @@ Age INT,
 Email VARCHAR(30)
 );
 
-5. Create an employees table using appropriate data types for:
+-- 5. Create an employees table using appropriate data types for:
    EmployeeID, EmployeeName, Salary, JoiningDate, IsActive.
 
 CREATE TABLE employees(
@@ -39,23 +39,23 @@ IsActive BOOLEAN
 
 -- PRIMARY KEY & AUTO_INCREMENT
 
-6. Alter  students table set StudentID is the PRIMARY KEY.
+-- 6. Alter  students table set StudentID is the PRIMARY KEY.
 
 ALTER TABLE students
 MODIFY COLUMN StudentID INT PRIMARY KEY;
 
-7. Alter employees table set EmployeeID is
+-- 7. Alter employees table set EmployeeID is
    the PRIMARY KEY and AUTO_INCREMENT.
 
 ALTER TABLE employees
 MODIFY COLUMN EmployeeID INT PRIMARY KEY AUTO_INCREMENT;
 
-8. Alter the existing employees table to remove AUTO_INCREMENT from the EmployeeID column while keeping it as the PRIMARY KEY.
+-- 8. Alter the existing employees table to remove AUTO_INCREMENT from the EmployeeID column while keeping it as the PRIMARY KEY.
 
 ALTER TABLE employees
 MODIFY COLUMN EmployeeID INT PRIMARY KEY ;
 
-9. Remove the PRIMARY KEY from an existing table.
+-- 9. Remove the PRIMARY KEY from an existing table.
 
 ALTER TABLE employees 
 DROP PRIMARY KEY;
@@ -63,28 +63,28 @@ DROP PRIMARY KEY;
 
 -- NOT NULL & UNIQUE
 
-10. Alter employees table EmployeeName
+-- 10. Alter employees table EmployeeName
     cannot contain NULL values.
 
 ALTER TABLE employees 
 MODIFY COLUMN EmployeeName VARCHAR(30) NOT NULL;
 
-11. Alter table employees set Email to be UNIQUE.
+-- 11. Alter table employees set Email to be UNIQUE.
 
 ALTER TABLE employees 
 ADD CONSTRAINT email_employees UNIQUE(Email);
 
-12. Add a NOT NULL constraint to an existing column.
+-- 12. Add a NOT NULL constraint to an existing column.
 
 ALTER TABLE students
 MODIFY COLUMN StudentID INT NOT NULL;
 
-13. Add a UNIQUE constraint to an existing column.
+-- 13. Add a UNIQUE constraint to an existing column.
 
 ALTER TABLE students
 ADD CONSTRAINT email_students UNIQUE(Email);
 
-14. Remove a UNIQUE constraint from an existing table.
+-- 14. Remove a UNIQUE constraint from an existing table.
 
 ALTER TABLE students
 DROP INDEX email_students;
@@ -92,20 +92,20 @@ DROP INDEX email_students;
 
 -- DEFAULT
 
-15. ALTER employees table SET IsActive
+-- 15. ALTER employees table SET IsActive
    a DEFAULT value of TRUE.
 
 ALTER TABLE employees
 MODIFY COLUMN IsActive BOOLEAN DEFAULT TRUE;
 
-16. Create an orders table where OrderStatus
+-- 16. Create an orders table where OrderStatus
     has a DEFAULT value of 'Pending'.
 
-CREATE TABLE orders(
+CREATE TABLE IF NOT EXISTS orders (
 OrderStatus VARCHAR(16) DEFAULT 'Pending'
 );
 
-17. Add a DEFAULT value to an existing column.
+-- 17. Add a DEFAULT value to an existing column.
 
 ALTER TABLE employees
 ALTER COLUMN IsActive SET DEFAULT TRUE;
@@ -113,52 +113,73 @@ ALTER COLUMN IsActive SET DEFAULT TRUE;
 
 -- CHECK
 
-18. Create an employees1 table where Salary
+-- 18. Create an employees1 table where Salary
     must be greater than 0.
 
 CREATE TABLE employees1(
 Salary DECIMAL(10,2) CHECK(Salary>0)
 );
 
-19. Create a products table where Price
+-- 19. Create a products table where Price
     must be greater than or equal to 0.
 
 CREATE TABLE products(
 Price DECIMAL(10,2) CHECK(Price>=0)
 );
 
-20. Add a CHECK constraint to an existing table.
+-- 20. Add a CHECK constraint to an existing table.
 
 ALTER TABLE employees
 ADD CONSTRAINT check_salary CHECK(Salary>0) ;
 
 -- FOREIGN KEY
 
-21. Create a departments table where DepartmentID
+-- 21. Create a departments table where DepartmentID
     is the PRIMARY KEY.
 
-22. Create an employees table where DepartmentID
+CREATE TABLE IF NOT EXISTS departments(
+DepartmentID INT PRIMARY KEY
+);
+
+-- 22. Create an employees table where DepartmentID
     is a FOREIGN KEY referencing departments.
 
-23. Add a FOREIGN KEY to an existing employees table.
+CREATE TABLE IF NOT EXISTS employees(
+DepartmentID VARCHAR(10),
+FOREIGN KEY(DepartmentID) REFERENCES departments(DepartmentID)
+);
 
-24. Remove a FOREIGN KEY constraint from an existing table.
+-- 23. Add a FOREIGN KEY to an existing employees table.
 
+ALTER TABLE employees
+ADD CONSTRAINT foreign_employees
+ADD FOREIGN KEY(EmployeeID)
+REFERENCES departments(EmployeeID);
+
+-- 24. Remove a FOREIGN KEY constraint from an existing table.
+
+ALTER TABLE employees
+DROP FOREIGN KEY foreign_employees;
 
 -- ALTER TABLE
 
-25. Add a Phone column to the employees table.
+-- 25. Add a Phone column to the employees table.
 
-26. Modify the data type of an existing column.
+ALTER TABLE employees
+ADD COLUMN Phone VARCHAR(20) ;
 
-27. Rename a column in an existing table.
+-- 26. Modify the data type of an existing column.
 
-28. Remove a column from an existing table.
+
+
+-- 27. Rename a column in an existing table.
+
+-- 28. Remove a column from an existing table.
 
 
 -- PRACTICAL / COMBINED
 
-29. Create a customers table with the following constraints:
+-- 29. Create a customers table with the following constraints:
 
     CustomerID   → PRIMARY KEY + AUTO_INCREMENT
     CustomerName → NOT NULL
@@ -167,7 +188,7 @@ ADD CONSTRAINT check_salary CHECK(Salary>0) ;
     Status       → DEFAULT 'Active'
 
 
-30. Create a company database containing
+-- 30. Create a company database containing
     departments and employees.
 
     departments:
