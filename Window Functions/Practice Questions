@@ -1,0 +1,86 @@
+-- Create Database window_practice
+
+CREATE DATABASE IF NOT EXISTS window_practice;
+
+-- Use database window_practice
+
+USE window_practice;
+
+-- Create Table employees with columns as emp_id as primary key, name, department, salary, joining date
+
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT,
+    joining_date DATE
+); 
+
+-- Insert atleast 50 rows of data in table employees
+
+INSERT INTO employees (emp_id, name, department, salary, joining_date)
+VALUES
+(1, 'Amit', 'IT', 60000, '2021-01-15'),
+(2, 'Rahul', 'IT', 75000, '2020-03-12'),
+(3, 'Priya', 'IT', 75000, '2022-06-18'),
+(4, 'Karan', 'IT', 50000, '2023-02-10'),
+(5, 'Neha', 'IT', 90000, '2019-08-21'),
+(6, 'Rohit', 'IT', 65000, '2021-11-05'),
+(7, 'Sneha', 'IT', 80000, '2020-09-14'),
+(8, 'Vikas', 'IT', 60000, '2022-12-01'),
+(9, 'Pooja', 'IT', 70000, '2023-04-17'),
+(10, 'Arjun', 'IT', 85000, '2019-05-25'),
+(11, 'Ravi', 'HR', 50000, '2021-02-11'),
+(12, 'Anjali', 'HR', 65000, '2020-07-19'),
+(13, 'Manish', 'HR', 65000, '2022-01-28'),
+(14, 'Kavita', 'HR', 55000, '2023-03-15'),
+(15, 'Suresh', 'HR', 80000, '2019-09-10'),
+(16, 'Divya', 'HR', 70000, '2021-06-22'),
+(17, 'Nitin', 'HR', 75000, '2020-11-13'),
+(18, 'Riya', 'HR', 55000, '2022-08-05'),
+(19, 'Akash', 'HR', 60000, '2023-01-09'),
+(20, 'Meena', 'HR', 80000, '2019-12-17'),
+
+(21, 'Vivek', 'Sales', 45000, '2022-02-14'),
+(22, 'Komal', 'Sales', 60000, '2021-05-18'),
+(23, 'Deepak', 'Sales', 70000, '2020-08-23'),
+(24, 'Nisha', 'Sales', 70000, '2023-03-11'),
+(25, 'Aman', 'Sales', 85000, '2019-04-16'),
+(26, 'Swati', 'Sales', 55000, '2022-07-20'),
+(27, 'Varun', 'Sales', 90000, '2020-01-08'),
+(28, 'Shreya', 'Sales', 65000, '2021-10-12'),
+(29, 'Mohit', 'Sales', 75000, '2023-02-25'),
+(30, 'Isha', 'Sales', 60000, '2019-11-30'),
+(31, 'Ramesh', 'Finance', 55000, '2021-03-15'),
+(32, 'Simran', 'Finance', 75000, '2020-06-21'),
+(33, 'Gaurav', 'Finance', 75000, '2022-09-18'),
+(34, 'Tanya', 'Finance', 65000, '2023-01-12'),
+(35, 'Harish', 'Finance', 90000, '2019-07-24'),
+(36, 'Nidhi', 'Finance', 60000, '2021-12-05'),
+(37, 'Varsha', 'Finance', 85000, '2020-04-17'),
+(38, 'Yash', 'Finance', 65000, '2022-05-29'),
+(39, 'Sonam', 'Finance', 70000, '2023-08-14'),
+(40, 'Raj', 'Finance', 80000, '2019-10-09'),
+(41, 'Sahil', 'Marketing', 50000, '2022-01-18'),
+(42, 'Preeti', 'Marketing', 60000, '2021-04-22'),
+(43, 'Abhishek', 'Marketing', 70000, '2020-09-15'),
+(44, 'Muskan', 'Marketing', 70000, '2023-02-19'),
+(45, 'Tarun', 'Marketing', 85000, '2019-06-11'),
+(46, 'Aarti', 'Marketing', 55000, '2022-10-25'),
+(47, 'Rakesh', 'Marketing', 90000, '2020-02-14'),
+(48, 'Payal', 'Marketing', 65000, '2021-08-17'),
+(49, 'Kunal', 'Marketing', 75000, '2023-05-23'),
+(50, 'Shivani', 'Marketing', 60000, '2019-12-02'),
+(51, 'Dev', 'Operations', 48000, '2022-03-10'),
+(52, 'Pallavi', 'Operations', 58000, '2021-06-14'),
+(53, 'Rajat', 'Operations', 68000, '2020-11-19'),
+(54, 'Kirti', 'Operations', 68000, '2023-01-25'),
+(55, 'Varun', 'Operations', 82000, '2019-05-13'),
+(56, 'Alka', 'Operations', 52000, '2022-09-07'),
+(57, 'Sameer', 'Operations', 88000, '2020-02-28'),
+(58, 'Jyoti', 'Operations', 62000, '2021-10-31'),
+(59, 'Naveen', 'Operations', 72000, '2023-04-09'),
+(60, 'Pankaj', 'Operations', 78000, '2019-08-16');
+
+-- 
+
